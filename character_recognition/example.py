@@ -15,4 +15,5 @@ def process_image():
     o, _ = get_image('numbers.png')
     slices = [(s, 'green', n) for ((_, s), n) in zip(get_digits_fake(o), numbers)]
     ani = make_animation(o, slices, 300)
-    plt.show()
+    # plt.show()
+    return ani
