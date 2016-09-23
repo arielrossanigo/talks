@@ -61,3 +61,5 @@ local
 .ipynb_checkpoints
 .vim.custom
 *ubyte
+
+data
