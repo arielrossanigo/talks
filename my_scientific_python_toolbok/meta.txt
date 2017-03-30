@@ -1,0 +1,18 @@
+Title
+=====
+ 
+My scientific python toolbox
+
+Abstract
+========
+When starting a new project, it's fundamental to use the right tools. The aim of this talk is to show some of the main characteristics of the tools that I use in projects related to data and machine learning. 
+The main subjects we will cover in the talk are: programming environment, data processing, visualizations and Machine Learning  
+
+About me
+========
+I'm Computer engineer since 2006 and I like everything related to Artificial Inteligence, Machine Learning and DataScience.
+I teach Artificial Inteligence (among other subjects ) since 2006.
+I'm joined to PyAr since 2005, and from that time I use Python to teach and work.
+I'm from Rafaela, Santa Fe.
+
+
