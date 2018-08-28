@@ -24,7 +24,7 @@ def radar_factory(num_vars, frame='circle'):
     # calculate evenly-spaced axis angles
     theta = np.linspace(0, 2*np.pi, num_vars, endpoint=False)
     # rotate theta such that the first axis is at the top
-    theta += np.pi/2
+    # theta += np.pi/2
 
     def draw_poly_patch(self):
         verts = unit_poly_verts(theta)
