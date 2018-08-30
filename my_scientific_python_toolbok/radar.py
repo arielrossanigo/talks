@@ -124,15 +124,12 @@ def plot_radar(data, titles, title='', legends=None, normalize=False, colors=Non
         ax.plot(theta, d, color=color)
         if fill:
             ax.fill(theta, d, facecolor=color, alpha=0.25)
-    # ax.set_rmax(1.0)
     ax.set_varlabels(titles)
 
     # add legend relative to top-left plot
     if legends:
-        plt.subplot(1, 1, 1)
-        labels = legends
-        legend = plt.legend(labels, loc=(0.9, .95), labelspacing=0.2)
-        plt.setp(legend.get_texts(), fontsize=15)
+        legend = plt.legend(legends, loc=(0.9, .95), labelspacing=0.2)
+        plt.setp(legend.get_texts(), fontsize=13)
         plt.setp(legend.get_lines(), linewidth=13, alpha=0.50)
 
     plt.show()
