@@ -1,0 +1,32 @@
+Titulo: 
+Deep learning para el procesado de imágenes.
+
+Abstract:
+Durante la charla se dará una introducción a Deep learning y los distintos tipos de layers usados para el procesamiento de imágenes.
+Además mencionaremos herramientas disponibles para la implementación y un ejemplo de clasificación utilizando Keras y TensorFlow como backend.
+
+Temas a ver durante la charla:
+* Machine Learning, Tipos de aprendizaje, Problemas comunes
+* Redes neuronales, Deep Learning
+* Layers de convolución, qué son? como funcionan?
+* MaxPooling, DropOut, DenseLayers
+* Ejemplo de clasificación de imágenes 
+* Visualización de filtros
+
+
+Title: 
+Introduction to image processing with deep learning
+
+Abstract:
+This talk is an introduction to deep learning and the kind of layers and networks used to perform image processing.
+During the talk a complete clasification example will be done using Keras. 
+
+Agenda:
+* Machine Learning, 
+* Neuronal Networks, Deep Learning
+* Convolution layers
+* MaxPooling, DropOut, DenseLayers
+* Classification example 
+* Filter visualization
+
+

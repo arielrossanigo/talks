@@ -1,0 +1,19 @@
+Titulo: 
+Procesando datos con Pandas y Dask.
+
+Abstract:
+En la charla se pretende hacer una breve introducción a Pandas, mostrando algunas de sus características más sobresalientes, 
+como así también una introducción a Dask, explicando cuando es conveniente utilizar uno u otro paquete y planteando un ejemplo que integre ambos.  
+
+
+Temas a ver durante la charla:
+* Carga de datos desde CSV y pickle
+* Indexado, indices de fechas, resampling
+* Trabajando con fechas
+* Trabajando con cadenas de texto
+* Visualización de datos.
+* Agregacion de datos
+* merge, concat, crosstab.
+* Performance Tips and tricks. 
+
+

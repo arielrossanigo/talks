@@ -1,0 +1,9 @@
+Titulo: 
+Reconocimiento de objetos en imágenes.
+
+Abstract:
+El objetivo de la charla es explicar lo básico de redes neuronales convolucionales y demás técnicas usadas para detectar objetos en imágenes. 
+Se mostrará también como utilizar modelos pre-entrenados que brindan solución a esta problemática.
+
+
+

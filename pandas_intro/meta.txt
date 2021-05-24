@@ -1,0 +1,40 @@
+Titulo: 
+Introducción a Pandas
+
+Abstract:
+El objetivo de la charla es mostrar algunas capacidades de Pandas para el análisis de datos. Durante la charla vamos a leer datos 
+desde distintas fuentes, procesarlos y visualizarlos.
+Sobre el final de la charla se mostrarán algunas situaciones de uso común que generalmente derivan en problemas de performance y 
+como evitar que esto suceda.
+
+Temas a ver durante la charla:
+* Carga de datos desde CSV y pickle
+* Indexado, indices de fechas, resampling
+* Trabajando con fechas
+* Trabajando con cadenas de texto
+* Visualización de datos.
+* Agregacion de datos
+* merge, concat, crosstab.
+* Performance Tips and tricks. 
+
+-----------------------------
+
+Title: 
+Pandas introduction.
+
+Abstract:
+The aim of this workshop is to show some of the capacities of Pandas to perform data analysis. 
+During the workshop we'll see how to read data from different sources, process the information and create some visualizations.
+
+List of subjects to be covered during the workshop:
+
+* Loading data from csv and pickle
+* Different kind of indexing
+* Working with dates
+* Working with text data
+* Data visualization.
+* Data aggregation
+* Merge, concat, crosstab functionalities
+* Performance Tips and tricks
+
+
