@@ -1,0 +1,129 @@
+5.1. What is Machine Learning?
+
+* Subfield of AI
+* Programs that learns from experience (or data in our case)
+
+5.2. Mostly used for pattern recognition and clustering. Algorithms doesn't have feedback.
+5.3. The algorithm is trained in an environment and receives a feedback telling if the output was right or wrong, but not what was the expected output.
+5.4. We have a dataset with features and expected outputs. The model is a function that tries to approximate the real function that determines the expected outputs
+
+Regression: predicts a real value (like the functions we all known)
+Classification: choose the output between some finite number of possible outputs. 
+
+6.1 Neural networks
+
+Es un modelo inspirado en el funcionamiento del cerebro, el cual esta compuesto de neuronas que se conectan entre si.
+La idea de este modelo es que a traves de muchas neuronas (unidades simples de computo, equivalentes a una regresion lineal), se puedan crear funciones complejas y no lineales.
+
+Is a model (originally) inspired by the human brain (a lot of simplification is done here). In this sense, a neuron is the simpler compute unit of the brain.
+
+We can see a neuron like a linear regression model (lineal function), where each input is connected with a weight and sum to produce an output. 
+In the matematical model, the sum is passed through an activation function to produce the real output. 
+The idea is that we can "train" the neuron adjusting the weights in order to produce the output that we want.
+
+Because this model involve a lot of neurons we talk about networks.
+
+
+In the ANN we'll organice the neurons in layers. Some common names for this layers (when we talk about feed forward networks) are input, output, and hidden layers.
+
+6.2. Lets see an example.
+
+There are a well known problem that its how to classify handwritten numbers from images. 
+There exists a famous dataset related to this task that is called MNIST and is what I'm using
+in this slide. In this dataset, 60.000 images of 28*28 pixels and their corresponding digit is provided. 
+
+In this problem of classifying digits, one can thing that the image is the input and the output needs to be what is the digit in the image. 
+So, to be more concrete, the image is a lot of pixels, each one have one value (how much white is present in this pixel). If we think in this way,
+each neuron will have 28x28 inputs, a total of 784.
+
+Another thing to think about is, Whats the meaning of the neuron output? Regarding this, we want to have some way of differenciate different digits, so, one way of 
+do that is to have 10 neurons, each one dedicated to recognice one digits. So, if we present an image with the number eight, the best response of this model will be a 1 in the 
+neuron assigned to 8 and 0 elsewhere.
+
+The training of the network will adjust the weights in order to produce the expected output. For example, weights where is expected to be white pixels will turn positives with 
+some negatives in the borders. 
+Let take a look on how this can be viewed plotting the weights ordered in the same way as inputs.
+
+
+6.3. As we can see, the pattern of the digits start to appear, but how can we improve this performance? (now is aprox 93% accuracy)
+
+6.4. Well, we can add more layers of neurons. With some extra layer we can combine different neurons. 
+
+One nice way of think about layers is that the ones near the input contains neurons that will activate with very basic patterns. In the example shown, when we present a Nine in the inputs, 
+different neurons activate in order to recognize the simple patterns colored in the second layer. 
+
+On the other hand, the layers near the outputs contains neurons that will activate recognizing more complex patterns. 
+
+What the rationale of this? The complexity of every layer is reduced using some kind of abstractions.
+
+Is it possible to recognice every function without a hidden layer? The answer is No. More than that, is not even possible to recognize a XOR function.
+Is it necessary to have more than one hidden layer? No, with only one layer is possible to generate whatever function we want, but, this could be difficult.
+In this example, one neuron in the first layer is able to recognize a vertical line in the image shown, another one can recognize parts of the loop of the number. These neurons can be re-used 
+in the recognition of other numbers, for example, a 1 or a 7 have the vertical line, the 8 have a loop, etc. So, if we plan to have only one hidden layer we need to have a lot more neurons and not knowledge
+can be reused.
+
+7.1. So, we reach to explanation of why Deep Learning?
+
+In the context of deep learning we want to mention some specific types of layers used mostly in image processing.
+
+8.1. The fist of this layers, and maybe the most important, is called convolutional layer. 
+Convolution is an algebra operation that had been used in computer vision for a long time. 
+The operation consist on apply a kernel over one matrix to generate another one. The application of the kernel is superposition of the kernel over one part of the matrix, 
+calculate the dot product and place the result in the central element of the superposition. This application is repeated moving the kernel until a new matrix is created.
+
+Why this operation is important? 
+* Because depending on the kernel being used we can produce different transformations in the image. 
+* Ie, we can find a particular kernel that recognizes vertical lines, another one to recognize loops, etc. 
+* The more useful thing is that because we are move the kernel all over the image, now we can detect vertical lines no matter where they are.
+
+How the kernel is selected?
+
+During the learning phase we'll found the weights to put in the kernel. More than that, we will find lot of kernels in order to recognize different patterns. 
+
+A common name for a kernel is filter.
+
+8.3. This are the most common parameter to configure a Convolutional layer in Keras
+
+9.1. Pooling layers are commonly used between convolutional layers to reduce the amount of parameters and control overfitting.
+
+The most common kind of pooling is Max pooling, that works by taking the maximum value of the superpossed input to put in the output. 
+A key difference with convolutions is that this king of filter operates independently over each image channel.
+
+Its very common to use a kernel size of (2, 2) and a stride of 2. With this configuration, after the pooling operation, we'll have only 25% of the image size.
+
+
+10.1 Drop out is a technique to randomly cut connections between neurons. The purpose is to avoid overfitting.
+
+11.1. The full network used to classify images. Here we have an initial phase of feature extraction, composed by layers of convolutions and pooling. 
+Afterthat, a dense network is used to classify images (Dense are the networks that we talk at the begining). 
+
+So, how we implement this in Python???
+
+12.1 Ok, we first import the modules we want to use. In this example we will try to identify if an image is a bird or a plane. 
+These images are taken from CIFAR 10, a dataset composed by images of 10 classes. (We'll use only 2). Keras provides this dataset.
+
+Appart from that, from Keras we'll use a Sequential model, a model composed by layers that propagates only in one direction. Different layers can be found across the library.
+
+12.2. A useful function used to plot images for debugging purposes
+
+12.3. Here we can see how to read the data provided by Keras. Its important to note that images are provided with values between 0 and 255, so, we need to normalize the input dividing by 255.
+ 
+12.4. Here we can see some images. 
+
+12.5. Here is how we create the model. Simple instanciate a Sequential model and start adding layers. 
+
+After the model declaration we need to call the method compile in order to prepare the model for the training phase.
+
+12.6. Training is performed calling the fit method. This method have parameters for the train features and the expected results.
+The batch size parameter is used to control how often weights are updated. Epochs is the number of times the whole dataset is shown to the network.
+
+12.7. Here we calculate metrics to see how well the model is working
+
+12.8, 12.9 we can see some examples of well classified images and some that are wrong classified.
+
+12.10. We can see how to open and classify some image from outside the original dataset.
+
+
+
+
+
