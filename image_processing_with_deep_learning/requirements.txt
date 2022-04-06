@@ -1,6 +1,6 @@
 Keras==2.3.1
 matplotlib==3.1.1
-notebook==6.0.1
+notebook==6.4.10
 numpy==1.17.3
 Pillow==6.2.1
 rise==5.5.1
