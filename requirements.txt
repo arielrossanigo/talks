@@ -3,7 +3,7 @@ graphviz==0.11
 jupyter==1.0.0
 matplotlib==3.1.0
 notebook==5.7.8
-numpy==1.16.4
+numpy==1.22.0
 pandas==0.24.2
 rise==5.5.0
 scikit-learn==0.21.2
